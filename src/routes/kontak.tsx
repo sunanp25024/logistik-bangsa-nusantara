@@ -25,8 +25,8 @@ function KontakPage() {
         title="Mari Diskusikan Kebutuhan Logistik Anda"
         description="Tim kami akan merespon permintaan konsultasi Anda dalam 1×24 jam kerja."
       />
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-5 gap-10">
+      <section className="py-14 bg-white">
+        <div className="mx-auto max-w-7xl px-4 lg:px-6 grid lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-6">
             {[
               { icon: MapPin, title: "Kantor Pusat", v: "Jl. Sudirman Kav. 52, Jakarta Selatan 12190, Indonesia" },

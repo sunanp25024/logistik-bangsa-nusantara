@@ -15,10 +15,10 @@ const hubs = [
 
 export function GlobalNetworkSection() {
   return (
-    <section className="py-20 lg:py-28 bg-charcoal text-white relative overflow-hidden">
+    <section className="py-14 lg:py-20 bg-charcoal text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(234,179,8,0.08),transparent_60%)]" />
-      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-6">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
           <div className="max-w-2xl">
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
               Jaringan Global

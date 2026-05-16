@@ -5,7 +5,7 @@ import { Logo } from "./Logo";
 export function Footer() {
   return (
     <footer className="bg-charcoal text-white/80">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8 py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-12">
+      <div className="mx-auto max-w-7xl px-4 lg:px-6 py-10 grid gap-10 md:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Logo light />
           <p className="mt-5 text-sm leading-relaxed text-white/60 max-w-sm">
@@ -51,7 +51,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/50">
+        <div className="mx-auto max-w-7xl px-4 lg:px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/50">
           <p>© {new Date().getFullYear()} PT Nusantara Cargo Lines. Seluruh hak cipta dilindungi.</p>
           <div className="flex gap-5">
             <a href="#" className="hover:text-primary">Kebijakan Privasi</a>

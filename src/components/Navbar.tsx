@@ -28,7 +28,7 @@ export function Navbar() {
         scrolled ? "bg-white/95 backdrop-blur border-b border-border shadow-sm" : "bg-white/80 backdrop-blur-sm"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-8 h-16">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 lg:px-6 h-16">
         <Logo />
         <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => (

@@ -18,7 +18,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-[linear-gradient(transparent_95%,rgba(255,255,255,0.04)_95%),linear-gradient(90deg,transparent_95%,rgba(255,255,255,0.04)_95%)] bg-[length:48px_48px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-12 gap-10 items-center">
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-6 py-14 lg:py-20 grid lg:grid-cols-12 gap-8 items-center">
         {/* LEFT */}
         <div className="lg:col-span-7 text-white animate-fade-up">
           <div className="inline-flex items-center gap-2 border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-medium tracking-[0.15em] text-white/80 uppercase">
@@ -50,7 +50,7 @@ export function Hero() {
             </Link>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
+          <div className="mt-8 grid grid-cols-3 gap-6 max-w-lg">
             {[
               { v: "80+", l: "Negara Tujuan" },
               { v: "25 Thn", l: "Pengalaman" },

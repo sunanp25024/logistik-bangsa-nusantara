@@ -17,9 +17,9 @@ const countryData = [
 
 export function InsightsSection() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="max-w-3xl mb-12">
+    <section className="py-14 lg:py-14 bg-white">
+      <div className="mx-auto max-w-7xl px-4 lg:px-6">
+        <div className="max-w-3xl mb-8">
           <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
             Business Insight
           </span>

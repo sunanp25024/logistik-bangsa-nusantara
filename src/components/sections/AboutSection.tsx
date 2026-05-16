@@ -9,8 +9,8 @@ export function AboutSection() {
     "Tim profesional berpengalaman lebih dari dua dekade",
   ];
   return (
-    <section className="py-20 lg:py-28 bg-white">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+    <section className="py-14 lg:py-14 bg-white">
+      <div className="mx-auto max-w-7xl px-4 lg:px-6 grid lg:grid-cols-12 gap-8 items-center">
         <div className="lg:col-span-6 relative">
           <img
             src={warehouse}
