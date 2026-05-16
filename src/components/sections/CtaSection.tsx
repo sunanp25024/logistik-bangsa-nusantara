@@ -9,7 +9,7 @@ export function CtaSection() {
         <img src={cargoShip} alt="Kapal cargo internasional" loading="lazy" width={1280} height={896} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-charcoal/85" />
       </div>
-      <div className="relative mx-auto max-w-5xl px-5 lg:px-8 py-20 lg:py-28 text-center text-white">
+      <div className="relative mx-auto max-w-5xl px-4 lg:px-6 py-14 lg:py-20 text-center text-white">
         <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
           Mulai Sekarang
         </span>

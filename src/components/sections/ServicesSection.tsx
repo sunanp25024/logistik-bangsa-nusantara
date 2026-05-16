@@ -11,9 +11,9 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="layanan" className="py-20 lg:py-28 bg-surface">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+    <section id="layanan" className="py-14 lg:py-20 bg-surface">
+      <div className="mx-auto max-w-7xl px-4 lg:px-6">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
           <div className="max-w-2xl">
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
               Layanan Kami

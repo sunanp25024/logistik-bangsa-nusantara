@@ -11,9 +11,9 @@ const features = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 lg:py-28 bg-surface">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="max-w-2xl mb-12">
+    <section className="py-14 lg:py-20 bg-surface">
+      <div className="mx-auto max-w-7xl px-4 lg:px-6">
+        <div className="max-w-2xl mb-8">
           <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
             Mengapa Memilih Kami
           </span>
