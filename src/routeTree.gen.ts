@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TentangRouteImport } from './routes/tentang'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as LupaPasswordRouteImport } from './routes/lupa-password'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LayananRouteImport } from './routes/layanan'
@@ -27,6 +28,11 @@ const TentangRoute = TentangRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LupaPasswordRoute = LupaPasswordRouteImport.update({
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/layanan': typeof LayananRoute
   '/login': typeof LoginRoute
   '/lupa-password': typeof LupaPasswordRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tentang': typeof TentangRoute
 }
@@ -84,6 +91,7 @@ export interface FileRoutesByTo {
   '/layanan': typeof LayananRoute
   '/login': typeof LoginRoute
   '/lupa-password': typeof LupaPasswordRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tentang': typeof TentangRoute
 }
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/layanan': typeof LayananRoute
   '/login': typeof LoginRoute
   '/lupa-password': typeof LupaPasswordRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tentang': typeof TentangRoute
 }
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/layanan'
     | '/login'
     | '/lupa-password'
+    | '/reset-password'
     | '/sitemap.xml'
     | '/tentang'
   fileRoutesByTo: FileRoutesByTo
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
     | '/layanan'
     | '/login'
     | '/lupa-password'
+    | '/reset-password'
     | '/sitemap.xml'
     | '/tentang'
   id:
@@ -131,6 +142,7 @@ export interface FileRouteTypes {
     | '/layanan'
     | '/login'
     | '/lupa-password'
+    | '/reset-password'
     | '/sitemap.xml'
     | '/tentang'
   fileRoutesById: FileRoutesById
@@ -143,6 +155,7 @@ export interface RootRouteChildren {
   LayananRoute: typeof LayananRoute
   LoginRoute: typeof LoginRoute
   LupaPasswordRoute: typeof LupaPasswordRoute
+  ResetPasswordRoute: typeof ResetPasswordRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TentangRoute: typeof TentangRoute
 }
@@ -161,6 +174,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/lupa-password': {
@@ -223,6 +243,7 @@ const rootRouteChildren: RootRouteChildren = {
   LayananRoute: LayananRoute,
   LoginRoute: LoginRoute,
   LupaPasswordRoute: LupaPasswordRoute,
+  ResetPasswordRoute: ResetPasswordRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TentangRoute: TentangRoute,
 }
