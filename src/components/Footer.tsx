@@ -44,9 +44,9 @@ export function Footer() {
         <div className="lg:col-span-3">
           <h4 className="text-sm font-semibold text-white mb-4">Kantor Pusat</h4>
           <ul className="space-y-3 text-sm">
-            <li className="flex gap-3"><MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" /> Jl. Sudirman Kav. 52, Jakarta Selatan 12190, Indonesia</li>
-            <li className="flex gap-3"><Phone className="h-4 w-4 text-primary mt-0.5 shrink-0" /> +62 21 1234 5678</li>
-            <li className="flex gap-3"><Mail className="h-4 w-4 text-primary mt-0.5 shrink-0" /> info@nusantaracargo.co.id</li>
+            <li className="flex gap-3"><MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" /><span>Jl. Sudirman Kav. 52, Jakarta Selatan 12190, Indonesia</span></li>
+            <li className="flex gap-3"><Phone className="h-4 w-4 text-primary mt-0.5 shrink-0" /><span>+62 21 1234 5678</span></li>
+            <li className="flex gap-3"><Mail className="h-4 w-4 text-primary mt-0.5 shrink-0" /><span>info@nusantaracargo.co.id</span></li>
           </ul>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 
 const links = [
@@ -43,16 +43,18 @@ export function Navbar() {
             </Link>
           ))}
         </nav>
-        <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+622112345678" className="flex items-center gap-2 text-sm font-medium text-charcoal">
-            <Phone className="h-4 w-4 text-primary" />
-            +62 21 1234 5678
-          </a>
+        <div className="hidden lg:flex items-center gap-4">
+          <Link
+            to="/login"
+            className="text-sm font-medium text-charcoal-soft hover:text-charcoal transition-colors"
+          >
+            Masuk
+          </Link>
           <Link
             to="/kontak"
             className="inline-flex items-center bg-primary px-5 py-2.5 text-sm font-semibold text-charcoal hover:bg-primary/90 transition-colors"
           >
-            Tombol Konsultasi
+            Konsultasi
           </Link>
         </div>
         <button
@@ -77,9 +79,16 @@ export function Navbar() {
               </Link>
             ))}
             <Link
+              to="/login"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex items-center justify-center border border-border px-5 py-2.5 text-sm font-semibold text-charcoal"
+            >
+              Masuk
+            </Link>
+            <Link
               to="/kontak"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center bg-primary px-5 py-2.5 text-sm font-semibold text-charcoal"
+              className="inline-flex items-center justify-center bg-primary px-5 py-2.5 text-sm font-semibold text-charcoal"
             >
               Konsultasi Sekarang
             </Link>
