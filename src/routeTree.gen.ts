@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TentangRouteImport } from './routes/tentang'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as LayananRouteImport } from './routes/layanan'
 import { Route as KontakRouteImport } from './routes/kontak'
 import { Route as JaringanRouteImport } from './routes/jaringan'
@@ -24,6 +25,11 @@ const TentangRoute = TentangRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LayananRoute = LayananRouteImport.update({
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/jaringan': typeof JaringanRoute
   '/kontak': typeof KontakRoute
   '/layanan': typeof LayananRoute
+  '/login': typeof LoginRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tentang': typeof TentangRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/jaringan': typeof JaringanRoute
   '/kontak': typeof KontakRoute
   '/layanan': typeof LayananRoute
+  '/login': typeof LoginRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tentang': typeof TentangRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/jaringan': typeof JaringanRoute
   '/kontak': typeof KontakRoute
   '/layanan': typeof LayananRoute
+  '/login': typeof LoginRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tentang': typeof TentangRoute
 }
@@ -79,16 +88,25 @@ export interface FileRouteTypes {
     | '/jaringan'
     | '/kontak'
     | '/layanan'
+    | '/login'
     | '/sitemap.xml'
     | '/tentang'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/jaringan' | '/kontak' | '/layanan' | '/sitemap.xml' | '/tentang'
+  to:
+    | '/'
+    | '/jaringan'
+    | '/kontak'
+    | '/layanan'
+    | '/login'
+    | '/sitemap.xml'
+    | '/tentang'
   id:
     | '__root__'
     | '/'
     | '/jaringan'
     | '/kontak'
     | '/layanan'
+    | '/login'
     | '/sitemap.xml'
     | '/tentang'
   fileRoutesById: FileRoutesById
@@ -98,6 +116,7 @@ export interface RootRouteChildren {
   JaringanRoute: typeof JaringanRoute
   KontakRoute: typeof KontakRoute
   LayananRoute: typeof LayananRoute
+  LoginRoute: typeof LoginRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TentangRoute: typeof TentangRoute
 }
@@ -116,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/layanan': {
@@ -154,9 +180,20 @@ const rootRouteChildren: RootRouteChildren = {
   JaringanRoute: JaringanRoute,
   KontakRoute: KontakRoute,
   LayananRoute: LayananRoute,
+  LoginRoute: LoginRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TentangRoute: TentangRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
