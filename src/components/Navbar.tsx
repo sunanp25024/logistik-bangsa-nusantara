@@ -79,9 +79,16 @@ export function Navbar() {
               </Link>
             ))}
             <Link
+              to="/login"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex items-center justify-center border border-border px-5 py-2.5 text-sm font-semibold text-charcoal"
+            >
+              Masuk
+            </Link>
+            <Link
               to="/kontak"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center bg-primary px-5 py-2.5 text-sm font-semibold text-charcoal"
+              className="inline-flex items-center justify-center bg-primary px-5 py-2.5 text-sm font-semibold text-charcoal"
             >
               Konsultasi Sekarang
             </Link>
